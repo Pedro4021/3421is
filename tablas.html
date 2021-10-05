@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 23-09</title>
+    <style>
+        .LooL{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<table class="LooL">
+    <tr>
+        <th>Tareas</th>
+        <th> C EP</th>
+
+    </tr>
+    <tr>
+        <td id="1N">Matematicas</td>
+        <td><button id="1-1" nombre="Matematicas" onclick="MoverC1(this)">Agregar</button><button id="1-2" nombre="Matematicas" onclick="MoverE1(this)">Agregar</button></td>
+    </tr>
+    <tr>
+        <td id="2N">Español</td>
+        <td><button id="2-1" nombre="Español" onclick="MoverC2(this)">Agregar</button><button id="2-2" nombre="Español" onclick="MoverE2(this)">Agregar</button></td>
+
+    </tr>
+    <tr>
+        <td id="3N">Fisica</td>
+        <td><button id="3-1" nombre="Fisica" onclick="MoverC3(this)">Agregar</button><button id="3-2" nombre="Fisica" onclick="MoverE3(this)">Agregar</button></td>
+    </tr>
+    <tr>
+        <td id="4N">Base De Datos</td>
+        <td><button id="4-1" nombre="Base De Datos" onclick="MoverC4(this)">Agregar</button><button id="4-2" nombre="Base De Datos" onclick="MoverE4(this)">Agregar</button></td>
+    </tr>
+    <tr>
+        <td id="5N">Ingles</td>
+        <td><button id="5-1" nombre="Ingles" onclick="MoverC5(this)">Agregar</button><button id="5-2" nombre="Ingles" onclick="MoverE5(this)">Agregar</button></td>
+    </tr>
+</table>
+
+<!--Tabla En Proceso-->
+<table class="LooL">
+    <thead>
+    <tr>
+        <th >En Proceso</th>
+    </tr>
+    </thead>
+    <tbody id="CE">
+    </tbody>
+</table>
+
+<!--Tabla Completado-->
+<table class="LooL">
+    <thead>
+    <tr>
+        <th >Concluidas</th>
+    </tr>
+    </thead>
+    <tbody id="CO">
+
+    </tbody>
+</table>
+
+<script>
+    var Borrar = '';
+    //Fila 1
+    function MoverE1(Tarea){
+        var nombre = Tarea.getAttribute('nombre');
+        document.getElementById('CE').innerHTML += '<tr><td>'+nombre+'</td></tr>';
+        document.getElementById('1-1').disabled = true;
+        document.getElementById('1-2').disabled = true;
+        document.getElementById('1N').innerHTML = '<tr><td>'+Borrar+'</td></tr>' ;
+
+    }
+    function MoverC1(Tarea){
+        var nombre = Tarea.getAttribute('nombre');
+        document.getElementById('CO').innerHTML += '<tr><td>'+nombre+'</td></tr>';
+        document.getElementById('1-1').disabled = true;
+        document.getElementById('1-2').disabled = true;
+        document.getElementById('1N').innerHTML = '<tr><td>'+Borrar+'</td></tr>' ;
+    }
+    //Fila 2
+    function MoverE2(Tarea){
+        var nombre = Tarea.getAttribute('nombre');
+        document.getElementById('CE').innerHTML += '<tr><td>'+nombre+'</td></tr>';
+        document.getElementById('2-1').disabled = true;
+        document.getElementById('2-2').disabled = true;
+        document.getElementById('2N').innerHTML = '<tr><td>'+Borrar+'</td></tr>' ;
+
+    }
+    function MoverC2(Tarea){
+        var nombre = Tarea.getAttribute('nombre');
+        document.getElementById('CO').innerHTML += '<tr><td>'+nombre+'</td></tr>';
+        document.getElementById('2-1').disabled = true;
+        document.getElementById('2-2').disabled = true;
+        document.getElementById('2N').innerHTML = '<tr><td>'+Borrar+'</td></tr>' ;
+    }
+    //Fila 3
+    function MoverE3(Tarea){
+        var nombre = Tarea.getAttribute('nombre');
+        document.getElementById('CE').innerHTML += '<tr><td>'+nombre+'</td></tr>';
+        document.getElementById('3-1').disabled = true;
+        document.getElementById('3-2').disabled = true;
+        document.getElementById('3N').innerHTML = '<tr><td>'+Borrar+'</td></tr>' ;
+
+    }
+    function MoverC3(Tarea){
+        var nombre = Tarea.getAttribute('nombre');
+        document.getElementById('CO').innerHTML += '<tr><td>'+nombre+'</td></tr>';
+        document.getElementById('3-1').disabled = true;
+        document.getElementById('3-2').disabled = true;
+        document.getElementById('3N').innerHTML = '<tr><td>'+Borrar+'</td></tr>' ;
+    }
+    //Fila 4
+    function MoverE4(Tarea){
+        var nombre = Tarea.getAttribute('nombre');
+        document.getElementById('CE').innerHTML += '<tr><td>'+nombre+'</td></tr>';
+        document.getElementById('4-1').disabled = true;
+        document.getElementById('4-2').disabled = true;
+        document.getElementById('4N').innerHTML = '<tr><td>'+Borrar+'</td></tr>' ;
+
+    }
+    function MoverC4(Tarea){
+        var nombre = Tarea.getAttribute('nombre');
+        document.getElementById('CO').innerHTML += '<tr><td>'+nombre+'</td></tr>';
+        document.getElementById('4-1').disabled = true;
+        document.getElementById('4-2').disabled = true;
+        document.getElementById('4N').innerHTML = '<tr><td>'+Borrar+'</td></tr>' ;
+    }
+    //Fila 5
+    function MoverE5(Tarea){
+        var nombre = Tarea.getAttribute('nombre');
+        document.getElementById('CE').innerHTML += '<tr><td>'+nombre+'</td></tr>';
+        document.getElementById('5-1').disabled = true;
+        document.getElementById('5-2').disabled = true;
+        document.getElementById('5N').innerHTML = '<tr><td>'+Borrar+'</td></tr>' ;
+
+    }
+    function MoverC5(Tarea){
+        var nombre = Tarea.getAttribute('nombre');
+        document.getElementById('CO').innerHTML += '<tr><td>'+nombre+'</td></tr>';
+        document.getElementById('5-1').disabled = true;
+        document.getElementById('5-2').disabled = true;
+        document.getElementById('5N').innerHTML = '<tr><td>'+Borrar+'</td></tr>' ;
+    }
+    console.log("LooL :v")
+</script>
+</body>
+</html>
