@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang= "en">
+    <head>
+        <meta name="viewport" content= "witdh=device-witdh, iniyial-scale=1.0">
+        <title>
+
+        </title>
+    </head>
+
+    <body>
+        <table>
+
+            <tr>
+                <th>N1</th>
+                <th>OPERACION</th>
+                <th>N2</th>
+                <TH>TOTAL</TH>
+                <TH> ACCION</TH>
+
+            </tr>
+            <tr>
+                <th><input type="text" ID= "N-1"> </th>
+                <TH>
+
+
+                    <select name="OP" id="OPERA">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                </TH>
+                <th>
+                    <INput type="text" id="N-2"></INput>
+                    
+                </th>
+                <th><input type="text" id="TOTAL"></th>
+
+                <th> <BUtton onclick="HOTA()">CALCULAR</BUtton></th>
+
+            </tr>
+        </table>
+
+        
+    </body>
+    <SCRipt>
+        function HOTA(){
+            let n1= document.getElementById('N-1').value;
+            let n2= document.getElementById('N-2').value;
+            let op= document.getElementById('OPERA').value;
+            let total=0;
+
+            switch(op){
+                case '+':
+                    total= parseInt(n1)+ parseInt(n2);
+                    break;
+                    case '-':
+                        
+                        total=parseInt(n1)- parseInt(n2);
+            break;
+
+            case '*':
+            total=parseInt(n1)* parseInt(n2);
+
+            break;
+
+            case '/':
+            total=parseInt(n1)/ parseInt(n2);
+                    }
+                   
+
+                    document.getElementById('TOTAL').value=total;
+            
+        }
+    </SCRipt>
+</html>
